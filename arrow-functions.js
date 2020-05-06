@@ -22,3 +22,14 @@ var createObj = () => ({
   test: 123
 });
 console.log(createObj());
+
+/*Com arrow functions não é possivel fazer a chamada da função antes de declara-la. (function hoisting)
+
+** ISSO NÃO É PERMITIDO **
+log ('teste');
+
+var log = value => {
+  console.log(value);
+}
+*/
+
