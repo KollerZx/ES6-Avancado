@@ -46,4 +46,3 @@ var obj = {
   }
 };
 obj.showContext();
-
