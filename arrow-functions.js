@@ -33,3 +33,17 @@ var log = value => {
 }
 */
 
+//Arrow functions tem uma propriedade que é de ter o contexto igual ao código que envolve ele
+var obj = {
+  showContext: function showContext(){
+    //this = obj
+    setTimeout(() => {
+      this.log('after 1000ms');
+    }, 1000);
+  },
+  log: function log(value){
+    console.log(value);
+  }
+};
+obj.showContext();
+
