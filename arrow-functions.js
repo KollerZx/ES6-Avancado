@@ -8,18 +8,18 @@ var sum = a => a + 5;
 //Se o retorno for uma declaração, definição de uma variável, condicionais, laços.
 //Obrigatoriamente deve-se escrever dentro das chaves
 var sum = (a , b) => {
-  var x = 10;
-  if (a > b){
+	var x = 10;
+	if (a > b){
   
-  }
-  return a + b;
+	}
+	return a + b;
 }
 
 //Objetos literais
 //Se quisermos fazer um retorno implicito de um objeto, obrigatoriamente as chaves devem ser colocadas dentro dos parenteses
 
 var createObj = () => ({
-  test: 123
+	test: 123
 });
 console.log(createObj());
 
@@ -35,14 +35,14 @@ var log = value => {
 
 //Arrow functions tem uma propriedade que é de ter o contexto igual ao código que envolve ele
 var obj = {
-  showContext: function showContext(){
+	showContext: function showContext(){
     //this = obj
-    setTimeout(() => {
-      this.log('after 1000ms');
+  	setTimeout(() => {
+    	this.log('after 1000ms');
     }, 1000);
   },
   log: function log(value){
-    console.log(value);
+  	console.log(value);
   }
 };
 obj.showContext();
