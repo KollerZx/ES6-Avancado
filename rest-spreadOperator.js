@@ -19,7 +19,7 @@ Sua sintaxe é '(...args)'
 o prototype de args é array, e ja traz os métodos de array para manipular os seus argumentos*/
 
 function sum(...args){
-    return args.reduce((acc, value) => acc + value, 0);
+    return args.reduce((acc, value) => acc + value, 0); // acc = valor acumulado | value = valor da iteração
 }
 console.log(sum(5, 6, 4, 3, 2));
 //20
@@ -31,10 +31,27 @@ Quando se estiver trabalhando com arrow functions tambem deve-se utilizar o rest
 /*const sum = (...rest) => {
     
 };*/
-/*Rest opertor tambem pode ser utilizado para pegar parâmetros restantes*/
-const sum = (a, b, ...rest) => {
+/*Rest operator pega todos os parâmetros de uma função e transforma em um array
+Tambem pode ser utilizado para pegar parâmetros restantes*/
+/*const sum = (a, b, ...rest) => {
     console.log(a, b, rest); //retorna os valores referenciados 'a' 'b' e o restante retorna no array 'rest'
     // 5 5 [5, 2, 3]  
 };
+console.log(sum(5, 6, 4, 3, 2));*/
+
+/*Spread Operator pega todos os itens de um array e transformar em parâmetros para uma função
+É aplicavel a strings, arrays, objetos literais e objetos iteraveis*/
+const multiply = (...args) => args.reduce((acc, value) => acc * value, 1);
+
+const sum=(...rest) => {
+    return multiply(...rest);
+};
 console.log(sum(5, 6, 4, 3, 2));
 
+/*Quebra a string em caracteres e joga para uma lista*/
+const stri = 'JavaScript ES6';
+function logArgs(...args) {
+    console.log(args);
+}
+logArgs(...stri);
+//(14) ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t", " ", "E", "S", "6"]
