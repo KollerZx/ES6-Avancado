@@ -16,7 +16,7 @@ var obj = {
 
 //Para pegar a propriedade nome do obj e armazenar em uma variavel, antes do Ecma6 utilizava-se a seguinte sintaxe.
 var name = obj.name;
-/*Ja utilizando o Destructuring 
+//Ja utilizando o Destructuring 
 
 var {name} = obj; //Ira destruir o obj {} encontrar uma propriedade 'name', pegar o seu valor e atribuir a uma variavel 'name'
 console.log(name);
