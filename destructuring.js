@@ -31,3 +31,32 @@ var {props:{age: age2, favoriteColors:[color1, color2]}} = obj;  //Destructuring
 console.log(age2)
 
 //var {name: name2} = obj; //Ira destruir a propriedade name e atribuir a uma variavel name2 
+
+var arr = [{name: 'apple', type: 'fruit'}];
+
+//Para pegar as propriedades do objeto dentro array na forma normal
+
+var fruit1 = arr[0].name;
+
+//Utilizando o destructuring
+var [{name}] = arr;
+
+console.log(name);
+//apple
+
+//Functions
+
+/*function sum(arr){
+  return arr[0] + arr[1];
+}
+console.log(sum([5,5]));*/
+//10
+
+function sum([a, b])={
+  return a + b;
+}
+console.log(sum([5,5]));
+
+
+
+
